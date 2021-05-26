@@ -278,7 +278,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.033531405, y: 0.87950325}
   m_AnchorMax: {x: 0.16933334, y: 0.9136554}
-  m_AnchoredPosition: {x: 0.3125, y: -0.25454712}
+  m_AnchoredPosition: {x: 0.3125, y: -0.2545166}
   m_SizeDelta: {x: -0.8523, y: -0.50906}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &22787664
@@ -531,7 +531,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.522, y: 0.5443447}
   m_AnchorMax: {x: 0.8435402, y: 0.6166894}
-  m_AnchoredPosition: {x: 0.054496765, y: 0.0038146973}
+  m_AnchoredPosition: {x: 0.054504395, y: 0.0038146973}
   m_SizeDelta: {x: -0.24440002, y: -1.1576996}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &82277474
@@ -859,7 +859,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.522, y: 0.46285936}
   m_AnchorMax: {x: 0.8435402, y: 0.53265536}
-  m_AnchoredPosition: {x: -0.10070038, y: -0.3981018}
+  m_AnchoredPosition: {x: -0.10070801, y: -0.3981018}
   m_SizeDelta: {x: -0.5546999, y: -0.32360077}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &176782267
@@ -979,7 +979,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.79234016, y: 0.036170535}
   m_AnchorMax: {x: 0.95100003, y: 0.08525812}
-  m_AnchoredPosition: {x: -0.40000916, y: -0.029968262}
+  m_AnchoredPosition: {x: -0.4000244, y: -0.030029297}
   m_SizeDelta: {x: 0.83869934, y: -0.0605011}
   m_Pivot: {x: 0.49999997, y: 0.5}
 --- !u!114 &181426964
@@ -2926,7 +2926,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.06208996, y: 0.036170535}
   m_AnchorMax: {x: 0.16933334, y: 0.08746139}
-  m_AnchoredPosition: {x: 0.1210022, y: -0.08300781}
+  m_AnchoredPosition: {x: 0.121032715, y: -0.08300781}
   m_SizeDelta: {x: -0.20999908, y: -0.12900162}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1197693275
@@ -3125,7 +3125,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.06208996, y: 0.82455105}
   m_AnchorMax: {x: 0.14016667, y: 0.8693447}
-  m_AnchoredPosition: {x: 0.0008087158, y: 0.16171265}
+  m_AnchoredPosition: {x: 0.0008544922, y: 0.16174316}
   m_SizeDelta: {x: 0.19710016, y: -0.16040039}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1340603914
@@ -3283,7 +3283,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.85700005, y: 0.8613447}
   m_AnchorMax: {x: 0.9194271, y: 0.8983447}
-  m_AnchoredPosition: {x: -0.10089111, y: -0.19332886}
+  m_AnchoredPosition: {x: -0.10089111, y: -0.19335938}
   m_SizeDelta: {x: -0.8029, y: -0.0722}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1595934103
@@ -3823,7 +3823,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.874, y: 0.9035847}
   m_AnchorMax: {x: 0.95728177, y: 0.93133867}
-  m_AnchoredPosition: {x: 0.10882568, y: 0.32400513}
+  m_AnchoredPosition: {x: 0.10882568, y: 0.3239746}
   m_SizeDelta: {x: -0.09991455, y: 0.5279999}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1765404154
@@ -4069,7 +4069,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.15266666, y: 0.46285936}
   m_AnchorMax: {x: 0.48248148, y: 0.53265536}
-  m_AnchoredPosition: {x: 0.32920837, y: 0.0079956055}
+  m_AnchoredPosition: {x: 0.32922363, y: 0.0079956055}
   m_SizeDelta: {x: -0.124700546, y: 0.54640007}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1859475848
@@ -4271,7 +4271,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.15266666, y: 0.5466894}
   m_AnchorMax: {x: 0.48248148, y: 0.6166894}
-  m_AnchoredPosition: {x: 0.4243927, y: 0.23852539}
+  m_AnchoredPosition: {x: 0.42437744, y: 0.23852539}
   m_SizeDelta: {x: -0.54629993, y: -0.07360077}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1987322705
@@ -4317,7 +4317,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1987322706}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 656216803}
+        m_TargetAssemblyTypeName: ChangeScene, Assembly-CSharp
+        m_MethodName: LoadScene
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: DailyChallenge Scene
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1987322706
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4774,7 +4786,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5174192495834288370, guid: 53658292c8ee27e4f946b2a8faa3456a, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 0.47299957
+      value: 0.47299194
       objectReference: {fileID: 0}
     - target: {fileID: 5174192495834288370, guid: 53658292c8ee27e4f946b2a8faa3456a, type: 3}
       propertyPath: m_AnchoredPosition.y
