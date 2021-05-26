@@ -2,6 +2,9 @@ using System.Collections.Generic;
 using System.Collections;
 using UnityEngine;
 using UnityEngine.UI;
+using CodeStage.AntiCheat.ObscuredTypes;
+using CodeStage.AntiCheat.Storage;
+
 
 public class QuizeManager : MonoBehaviour
 {
@@ -64,10 +67,11 @@ public class QuizeManager : MonoBehaviour
             yield return null;
         } while(timer > 0f);
         SelectQuestion();
+        
     }
     private void BuyExtraTime() {
-        if(PlayerPrefs.GetInt("Coin") >= 30)
-            PlayerPrefs.SetInt("Coin", PlayerPrefs.GetInt("Coin") - 30);
+        if(ObscuredPrefs.GetInt("Coin") >= 30)
+            ObscuredPrefs.SetInt("Coin", ObscuredPrefs.GetInt("Coin") - 30);
         else {
             StartCoroutine(CoinWarning());
             return;
@@ -79,10 +83,10 @@ public class QuizeManager : MonoBehaviour
         timerBtn.interactable = false;
     }
     private void SetScoreTxt() {
-        scoreTxt.text = "" + PlayerPrefs.GetInt("Score");
+        scoreTxt.text = "" + ObscuredPrefs.GetInt("Score");
     }
     private void SetCoinTxt() {
-        coinTxt.text = "" + PlayerPrefs.GetInt("Coin");
+        coinTxt.text = "" + ObscuredPrefs.GetInt("Coin");
     }
     private void SetActiveOff() {
         plusTxt.SetActive(false);
@@ -124,8 +128,8 @@ public class QuizeManager : MonoBehaviour
             delete2Answers.onClick.AddListener(() => Delete2Choses());
     }
     void Delete2Choses() {
-        if(PlayerPrefs.GetInt("Coin") >= 40) {
-            PlayerPrefs.SetInt("Coin", PlayerPrefs.GetInt("Coin") - 40);
+        if(ObscuredPrefs.GetInt("Coin") >= 40) {
+            ObscuredPrefs.SetInt("Coin", ObscuredPrefs.GetInt("Coin") - 40);
             SetCoinTxt();
         }
         else {
@@ -153,7 +157,7 @@ public class QuizeManager : MonoBehaviour
         delete2Answers.onClick.RemoveAllListeners();
         StopCoroutine("Timer");
         ShowScoreChange(currentBtn.transform.position, plusTxt);
-        PlayerPrefs.SetInt("Score", PlayerPrefs.GetInt("Score") + scoreForCorrect);
+        ObscuredPrefs.SetInt("Score", ObscuredPrefs.GetInt("Score") + scoreForCorrect);
         correct++;
         SetScoreTxt();
         Image btnImg = currentBtn.GetComponent<Image>();
@@ -178,11 +182,11 @@ public class QuizeManager : MonoBehaviour
 
     }
     IEnumerator GoNextQuestion(Image btnImg, Button currentBtn) {
-        if(PlayerPrefs.GetInt("Score") < 10)
-            PlayerPrefs.SetInt("Score", 0);
+        if(ObscuredPrefs.GetInt("Score") < 10)
+            ObscuredPrefs.SetInt("Score", 0);
         else {
             ShowScoreChange(currentBtn.transform.position, minusTxt);
-            PlayerPrefs.SetInt("Score", PlayerPrefs.GetInt("Score") - scoreForWrong);
+            ObscuredPrefs.SetInt("Score", ObscuredPrefs.GetInt("Score") - scoreForWrong);
         }
         SetScoreTxt();
         yield return new WaitForSeconds(changeQuestionTime);
@@ -192,8 +196,8 @@ public class QuizeManager : MonoBehaviour
 
     }
     public void TryAgain() {
-        if(PlayerPrefs.GetInt("Coin") >= 40) {
-            PlayerPrefs.SetInt("Coin", PlayerPrefs.GetInt("Coin") - 40);
+        if(ObscuredPrefs.GetInt("Coin") >= 40) {
+            ObscuredPrefs.SetInt("Coin", ObscuredPrefs.GetInt("Coin") - 40);
             SetCoinTxt();
         }
         else {
@@ -228,22 +232,22 @@ public class QuizeManager : MonoBehaviour
         }
         else if(correct <= 8) {
             //2 stars
-            PlayerPrefs.SetInt("Coin", PlayerPrefs.GetInt("Coin") + 15);
+            ObscuredPrefs.SetInt("Coin", ObscuredPrefs.GetInt("Coin") + 15);
             coinEarned.text = "" + 15;
         }
         else if(correct == 9) {
             //3 stars
-            PlayerPrefs.SetInt("Coin", PlayerPrefs.GetInt("Coin") + 25);
+            ObscuredPrefs.SetInt("Coin", ObscuredPrefs.GetInt("Coin") + 25);
             coinEarned.text = "" + 25;
         }
         else if(correct == 10) {
             if(UsedHelp()) {
-                PlayerPrefs.SetInt("Coin", PlayerPrefs.GetInt("Coin") + 25);
+                ObscuredPrefs.SetInt("Coin", ObscuredPrefs.GetInt("Coin") + 25);
                 coinEarned.text = "" + 25;
             }
 
             else {
-                PlayerPrefs.SetInt("Coin", PlayerPrefs.GetInt("Coin") + 40);
+                ObscuredPrefs.SetInt("Coin", ObscuredPrefs.GetInt("Coin") + 40);
                 coinEarned.text = "" + 40;
             }
         }
@@ -257,10 +261,10 @@ public class QuizeManager : MonoBehaviour
     private void FinishGame() {
         questionCanvas.SetActive(false);
         finishedCanvas.SetActive(true);
-        finalScoreTxt.text = "" + PlayerPrefs.GetInt("Score");
+        finalScoreTxt.text = "" + ObscuredPrefs.GetInt("Score");
         finalCorrects.text = "" + correct;
         CalculateCoin();
-        finalCoin.text = "" + PlayerPrefs.GetInt("Coin");
+        finalCoin.text = "" + ObscuredPrefs.GetInt("Coin");
         delete2Answers.interactable = true;
     }
     public void Restart() {
@@ -272,15 +276,15 @@ public class QuizeManager : MonoBehaviour
     }
     private void Update() {//developer
         if(Input.GetKeyDown(KeyCode.S)) {
-            PlayerPrefs.SetInt("Score", 0);
+            ObscuredPrefs.SetInt("Score", 0);
             Debug.Log("Score Sets to 0");
         }
         if(Input.GetKeyDown(KeyCode.C)) {
-            PlayerPrefs.SetInt("Coin", 0);
+            ObscuredPrefs.SetInt("Coin", 0);
             Debug.Log("Coins sets to 0");
         }
         if(Input.GetKeyDown(KeyCode.X)) {
-            PlayerPrefs.SetInt("Coin", PlayerPrefs.GetInt("Coin") + 10);
+            ObscuredPrefs.SetInt("Coin", ObscuredPrefs.GetInt("Coin") + 10);
             Debug.Log("Added 10 coins");
             SetCoinTxt();
         }
