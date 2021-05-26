@@ -704,6 +704,98 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 116597088}
   m_CullTransparentMesh: 1
+--- !u!1 &123349636
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 123349637}
+  - component: {fileID: 123349640}
+  - component: {fileID: 123349639}
+  - component: {fileID: 123349638}
+  m_Layer: 5
+  m_Name: CoinNumber
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &123349637
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 123349636}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1065805494}
+  m_RootOrder: 20
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.84866685, y: 0.9414792}
+  m_AnchorMax: {x: 0.9138716, y: 0.96500003}
+  m_AnchoredPosition: {x: -0.1000061, y: -0.5}
+  m_SizeDelta: {x: 0.6300049, y: -0.7292023}
+  m_Pivot: {x: 0.5, y: 0.5000004}
+--- !u!114 &123349638
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 123349636}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3c4728b011492ad4c981d2e16136bad1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &123349639
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 123349636}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a4bde79e34a564d4180a115864f98c20, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FontData:
+    m_Font: {fileID: 12800000, guid: 52eed91d557600e4b8bb6fab086e966a, type: 3}
+    m_FontSize: 24
+    m_FontStyle: 1
+    m_BestFit: 1
+    m_MinSize: 1
+    m_MaxSize: 40
+    m_Alignment: 4
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: 9999
+--- !u!222 &123349640
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 123349636}
+  m_CullTransparentMesh: 1
 --- !u!1 &167398090
 GameObject:
   m_ObjectHideFlags: 0
@@ -2632,6 +2724,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   chanceWheel: {fileID: 588861895}
   userScoreTxt: {fileID: 196903185}
+  userCoinTxt: {fileID: 123349639}
 --- !u!4 &977290195
 Transform:
   m_ObjectHideFlags: 0
@@ -2834,6 +2927,7 @@ RectTransform:
   - {fileID: 1765404153}
   - {fileID: 196903183}
   - {fileID: 656216804}
+  - {fileID: 123349637}
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -4830,19 +4924,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5174192495997220362, guid: 53658292c8ee27e4f946b2a8faa3456a, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -0.5522
+      value: -0.55218506
       objectReference: {fileID: 0}
     - target: {fileID: 5174192495997220362, guid: 53658292c8ee27e4f946b2a8faa3456a, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -109.097305
+      value: 18
       objectReference: {fileID: 0}
     - target: {fileID: 5174192495997220363, guid: 53658292c8ee27e4f946b2a8faa3456a, type: 3}
       propertyPath: m_ConnectedAnchor.x
-      value: 145.9478
+      value: 539.4478
       objectReference: {fileID: 0}
     - target: {fileID: 5174192495997220363, guid: 53658292c8ee27e4f946b2a8faa3456a, type: 3}
       propertyPath: m_ConnectedAnchor.y
-      value: 151.6527
+      value: 421.74274
       objectReference: {fileID: 0}
     - target: {fileID: 5174192496037220573, guid: 53658292c8ee27e4f946b2a8faa3456a, type: 3}
       propertyPath: m_AnchorMax.x
