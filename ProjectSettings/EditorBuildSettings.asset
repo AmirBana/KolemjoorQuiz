@@ -12,6 +12,9 @@ EditorBuildSettings:
     path: Assets/_Scenes/Main Scene.unity
     guid: a5d2ca81bcc4cac4c97a1883feef1c03
   - enabled: 1
+    path: Assets/_Scenes/Level Scene.unity
+    guid: 78a8807121b026f49818d19d32b8b257
+  - enabled: 1
     path: Assets/_Scenes/Question Scene.unity
     guid: 2cda990e2423bbf4892e6590ba056729
   - enabled: 1
