@@ -1,10 +1,11 @@
 using System.Collections.Generic;
 using System.Collections;
+using System;
 using UnityEngine;
 using UnityEngine.UI;
 using CodeStage.AntiCheat.ObscuredTypes;
 using CodeStage.AntiCheat.Storage;
-
+using Random = UnityEngine.Random;
 
 public class QuizeManager : MonoBehaviour
 {
@@ -42,6 +43,11 @@ public class QuizeManager : MonoBehaviour
     public GameObject finishedCanvas;
     public GameObject questionCanvas;
     private int correct = 0;
+    private bool quizeTimeStart = false;
+
+    float timer;
+    bool isStarted = false;
+    DateTime pauseDateTime;
 
     // Start is called before the first frame update
     void Awake() {
@@ -51,6 +57,18 @@ public class QuizeManager : MonoBehaviour
         }
     }
     private void Start() {
+        isStarted = true;
+    }
+    private void OnApplicationPause(bool pause) {
+        if(isStarted) {
+            if(pause) {
+                pauseDateTime = DateTime.Now;
+            }
+            else {
+                timer -= Mathf.Abs((int)(DateTime.Now - pauseDateTime).TotalSeconds);
+            }
+        }
+        
     }
     void OnEnable() {
         SelectQuestion();
@@ -59,7 +77,7 @@ public class QuizeManager : MonoBehaviour
         isTimeBuyed = false;
     }
     private IEnumerator Timer() {
-        float timer = startTime;
+       timer = startTime;
         do {
             timer -= Time.deltaTime;
             TimerSlider.value = timer / startTime;
@@ -182,6 +200,7 @@ public class QuizeManager : MonoBehaviour
 
     }
     IEnumerator GoNextQuestion(Image btnImg, Button currentBtn) {
+        tryAgain.interactable = false;
         if(ObscuredPrefs.GetInt("Score") < 10)
             ObscuredPrefs.SetInt("Score", 0);
         else {
@@ -229,6 +248,8 @@ public class QuizeManager : MonoBehaviour
             //1 star
             //should wait 10 minute and 0 coin
             coinEarned.text = "" + 0;
+            quizeTimeStart = true;
+            
         }
         else if(correct <= 8) {
             //2 stars
@@ -268,11 +289,26 @@ public class QuizeManager : MonoBehaviour
         delete2Answers.interactable = true;
     }
     public void Restart() {
-        unAnswered = new List<Questions>(answereds);
-        answereds.Clear();
-        correct = 0;
-        questionCanvas.SetActive(true);
-        finishedCanvas.SetActive(false);
+        if(quizeTimeStart) {
+            if(ObscuredPrefs.GetInt("LostHeart") < 5) {
+                ObscuredPrefs.SetInt("LostHeart", ObscuredPrefs.GetInt("LostHeart") + 1);
+                unAnswered = new List<Questions>(answereds);
+                answereds.Clear();
+                correct = 0;
+                questionCanvas.SetActive(true);
+                finishedCanvas.SetActive(false);
+            }
+            else {
+                print("u cant restart now");
+            }
+        }
+        else {
+            unAnswered = new List<Questions>(answereds);
+            answereds.Clear();
+            correct = 0;
+            questionCanvas.SetActive(true);
+            finishedCanvas.SetActive(false);
+        }
     }
     private void Update() {//developer
         if(Input.GetKeyDown(KeyCode.S)) {

@@ -14,7 +14,6 @@ public class HomeScene : MonoBehaviour
         userScoreTxt.text = "" + ObscuredPrefs.GetInt("Score");
         userCoinTxt.text = "" + ObscuredPrefs.GetInt("Coin");
     }
-
     public void WheelChance()
     {
         chanceWheel.GetComponent<Canvas>().sortingOrder = 2;
