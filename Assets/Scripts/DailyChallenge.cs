@@ -1,8 +1,10 @@
 using System.Collections.Generic;
 using System.Collections;
+using System;
 using UnityEngine;
 using UnityEngine.UI;
 using CodeStage.AntiCheat.Storage;
+using Random = UnityEngine.Random;
 
 public class DailyChallenge : MonoBehaviour
 {
@@ -41,6 +43,9 @@ public class DailyChallenge : MonoBehaviour
     public GameObject finishedCanvas;
     public GameObject questionCanvas;
     private int correct = 0;
+    bool isStarted=false;
+    float timer;
+    DateTime pausedDateTime;
 
     // Start is called before the first frame update
     void Awake() {
@@ -50,8 +55,19 @@ public class DailyChallenge : MonoBehaviour
         }
     }
     private void Start() {
+        isStarted = true;
         StartCoroutine("Timer");
         questionShown = 1;
+    }
+    private void OnApplicationPause(bool pause) {
+        if(isStarted) {
+            if(pause) {
+                pausedDateTime = DateTime.Now;
+            }
+            else {
+                timer -= Mathf.Abs((int)(DateTime.Now - pausedDateTime).TotalSeconds);
+            }
+        }
     }
     void OnEnable() {
         SelectQuestion();
@@ -59,7 +75,7 @@ public class DailyChallenge : MonoBehaviour
         SetCoinTxt();
     }
     private IEnumerator Timer() {
-        float timer = startTime;
+        timer = startTime;
         do {
             while(paused) {
                 yield return null;
