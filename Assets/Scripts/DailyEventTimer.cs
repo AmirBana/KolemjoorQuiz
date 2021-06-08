@@ -20,6 +20,8 @@ public class DailyEventTimer : MonoBehaviour
     private bool timerSet;
     private bool countIsReady;
     private bool countIsReady2;
+    public bool ReadyToRotate;
+    public bool IsPlayed;
     void Start()
     {
         eventStartTime = TimeSpan.Parse(StartTime);
@@ -52,30 +54,41 @@ public class DailyEventTimer : MonoBehaviour
 
     void Update()
     {
-      
+        IsPlayed = ObscuredPrefs.GetBool("IsPlayed");print(IsPlayed);
         if (timerSet)
         {
-            
+
+            if (ObscuredPrefs.GetBool("IsPlayed"))
+            {
+                disableButton("شما  چالش روزانه را بازی کرده اید!");
+            }
+
 
             if (currentTime >= eventStartTime && currentTime <= eventEndTime)
             {//this means the event as already started and players can click and join
                 _remainingTime = eventEndTime.Subtract(currentTime);
                 tcounter = _remainingTime.TotalMilliseconds;
+                ObscuredPrefs.SetBool("ReadyToRotate",true);
                 countIsReady2 = true;
-                               
-
+              
             }
             else if (currentTime < eventStartTime )
             {//this means the event had not started yet for today
                 _remainingTime = eventStartTime.Subtract(currentTime);
                 tcounter = _remainingTime.TotalMilliseconds;
+                //ObscuredPrefs.SetBool("ReadyToRotate", false);
                 countIsReady = true;
+
+            }
+            if (currentTime >= eventEndTime)
+            {
+                //ObscuredPrefs.SetBool("IsPlayed", false);
 
             }
             else
             {//the event as already passed
                 disableButton("چالش روز به اتمام رسیده است!");
-
+                ObscuredPrefs.SetBool("IsPlayed", false);
             }
         }
 
@@ -91,6 +104,10 @@ public class DailyEventTimer : MonoBehaviour
         return Timeformat;
     }
 
+    public void Played()
+    {
+        ObscuredPrefs.SetBool("IsPlayed", true);
+    }
 
     private void startCountdown()
     {
@@ -109,10 +126,13 @@ public class DailyEventTimer : MonoBehaviour
     {
         timerSet = false;
         tcounter -= Time.deltaTime * 1000;
-      
-        enableButton("چالش روزانه شروع شد! تا پايان : " + GetRemainingTime(tcounter));
+        if (ObscuredPrefs.GetBool("ReadyToRotate") &&!ObscuredPrefs.GetBool("IsPlayed"))
+        {
+            enableButton("چالش روزانه شروع شد! تا پايان : " + GetRemainingTime(tcounter));
 
-        
+        }
+
+
 
         if (tcounter <= 0)
         {
