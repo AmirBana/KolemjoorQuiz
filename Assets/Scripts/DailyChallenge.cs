@@ -119,7 +119,7 @@ public class DailyChallenge : MonoBehaviour
                 answerBtns[i].onClick.AddListener(() => StartCoroutine(CorrectAnswer(currentBtn)));
             }
             else {
-                answerBtns[i].onClick.AddListener(() => WrongAnswer(currentBtn));
+                answerBtns[i].onClick.AddListener(() => StartCoroutine(WrongAnswer(currentBtn)));
             }
         }
         answereds.Add(unAnswered[random]);
@@ -172,21 +172,32 @@ public class DailyChallenge : MonoBehaviour
         btnImg.sprite = imgAnswer;
         SelectQuestion();
     }
-    private void WrongAnswer(Button currentBtn) {
+    /*private void*/IEnumerator WrongAnswer(Button currentBtn) {
         paused = true;
         delete2Answers.onClick.RemoveAllListeners();
         //StopCoroutine("Timer");
         Image btnImg = currentBtn.GetComponent<Image>();
         btnImg.sprite = imgWrong;
         IntractableAnswerBtns(false);
-        goNext.GetComponent<Button>().onClick.RemoveAllListeners();
-        goNext.SetActive(true);
-        goNext.GetComponent<Button>().onClick.AddListener(() => StartCoroutine(GoNextQuestion(btnImg, currentBtn)));
-        if(!isTried)
-            tryAgain.interactable = true;
+        //goNext.GetComponent<Button>().onClick.RemoveAllListeners();
+        //goNext.SetActive(true);
+        //goNext.GetComponent<Button>().onClick.AddListener(() => StartCoroutine(GoNextQuestion(btnImg, currentBtn)));
+        //if(!isTried)
+        //tryAgain.interactable = true;
+        if(ObscuredPrefs.GetInt("Score") < 10)
+            ObscuredPrefs.SetInt("Score", 0);
+        else {
+            ShowScoreChange(currentBtn.transform.position, minusTxt);
+            ObscuredPrefs.SetInt("Score", ObscuredPrefs.GetInt("Score") - scoreForWrong);
+        }
+        SetScoreTxt();
+        yield return new WaitForSeconds(changeQuestionTime);
+        btnImg.sprite = imgAnswer;
+        //goNext.SetActive(false);
+        SelectQuestion();
 
     }
-    IEnumerator GoNextQuestion(Image btnImg, Button currentBtn) {
+    /*IEnumerator GoNextQuestion(Image btnImg, Button currentBtn) {
         if(tryAgain.interactable == true)
             tryAgain.interactable = false;
         if(ObscuredPrefs.GetInt("Score") < 10)
@@ -201,27 +212,7 @@ public class DailyChallenge : MonoBehaviour
         goNext.SetActive(false);
         SelectQuestion();
 
-    }
-    public void TryAgain() {
-        paused = false;
-        if(ObscuredPrefs.GetInt("Coin") >= 40) {
-            ObscuredPrefs.SetInt("Coin", ObscuredPrefs.GetInt("Coin") - 40);
-            SetCoinTxt();
-        }
-        else {
-            StartCoroutine(CoinWarning());
-            return;
-        }
-        //everything comes here
-        goNext.SetActive(false);
-        IntractableAnswerBtns(true);
-       // StartCoroutine("Timer");
-        for(int i = 0; i < answerBtns.Length; i++) {
-            answerBtns[i].GetComponent<Image>().sprite = imgAnswer;
-        }
-        tryAgain.interactable = false;
-        isTried = true;
-    }
+    }*/
     void IntractableAnswerBtns(bool i) {
         foreach(Button btn in answerBtns)
             btn.interactable = i;
