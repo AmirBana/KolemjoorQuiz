@@ -16,7 +16,7 @@ public class HomeScene : MonoBehaviour
     }
     public void WheelChance()
     {
-        chanceWheel.GetComponent<Canvas>().sortingOrder = 2;
+        chanceWheel.GetComponent<Canvas>().sortingOrder = 5;
     }
     public void BackWheelChance()
     {
