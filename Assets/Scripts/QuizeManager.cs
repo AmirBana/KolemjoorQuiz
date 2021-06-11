@@ -249,7 +249,11 @@ public class QuizeManager : MonoBehaviour
             //should wait 10 minute and 0 coin
             coinEarned.text = "" + 0;
             quizeTimeStart = true;
-            
+            if(WorldTimeAPI.Instance.IsTimeLoaded)
+                ObscuredPrefs.SetString("IsLost", WorldTimeAPI.Instance.GetCurrentDateTime().AddMinutes(10).ToString());
+            else
+                ObscuredPrefs.SetString("IsLost", DateTime.Now.AddMinutes(10).ToString());
+
         }
         else if(correct <= 8) {
             //2 stars
@@ -292,9 +296,22 @@ public class QuizeManager : MonoBehaviour
         if(quizeTimeStart) {
             if(ObscuredPrefs.GetInt("LostHeart") < 5) {
                 ObscuredPrefs.SetInt("LostHeart", ObscuredPrefs.GetInt("LostHeart") + 1);
+                Debug.Log("after: "+ObscuredPrefs.GetString("LostHeartDate"));
+                if(ObscuredPrefs.GetString("LostHeartDate") == "") {
+                    if(WorldTimeAPI.Instance.IsTimeLoaded) {
+                        ObscuredPrefs.SetString("LostHeartDate", WorldTimeAPI.Instance.GetCurrentDateTime().AddDays(1).ToString());
+                        Debug.Log("Time from api: "+ObscuredPrefs.GetString("LostHeartDate"));
+                    }
+                    else {
+                        ObscuredPrefs.SetString("LostHeartDate", DateTime.Now.AddDays(1).ToString());
+                        Debug.Log("Local Time: "+ObscuredPrefs.GetString("LostHeartDate"));
+                    }
+                }
+                quizeTimeStart = false;
                 unAnswered = new List<Questions>(answereds);
                 answereds.Clear();
                 correct = 0;
+                ObscuredPrefs.SetString("IsLost", "");
                 questionCanvas.SetActive(true);
                 finishedCanvas.SetActive(false);
             }
@@ -303,6 +320,7 @@ public class QuizeManager : MonoBehaviour
             }
         }
         else {
+            quizeTimeStart = false;
             unAnswered = new List<Questions>(answereds);
             answereds.Clear();
             correct = 0;
@@ -323,6 +341,10 @@ public class QuizeManager : MonoBehaviour
             ObscuredPrefs.SetInt("Coin", ObscuredPrefs.GetInt("Coin") + 10);
             Debug.Log("Added 10 coins");
             SetCoinTxt();
+        }
+        if(Input.GetKeyDown(KeyCode.A)) {
+            ObscuredPrefs.SetInt("LostHeart", 0);
+            Debug.Log("full hearts");
         }
 
     }

@@ -30,7 +30,7 @@ public class WorldTimeAPI : MonoBehaviour
         public string datetime;
         //...
     }
-    const string API_URL = "http://worldtimeapi.org/api/ip";
+    const string API_URL = "http://worldtimeapi.org/api/timezone/iran";
     [HideInInspector] public bool IsTimeLoaded = false;
     private DateTime currentDateTime = DateTime.Now;
     private void Start() {
