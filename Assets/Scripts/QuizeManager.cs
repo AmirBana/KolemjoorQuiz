@@ -249,7 +249,11 @@ public class QuizeManager : MonoBehaviour
             //should wait 10 minute and 0 coin
             coinEarned.text = "" + 0;
             quizeTimeStart = true;
-            
+            if(WorldTimeAPI.Instance.IsTimeLoaded)
+                ObscuredPrefs.SetString("IsLost", WorldTimeAPI.Instance.GetCurrentDateTime().AddMinutes(10).ToString());
+            else
+                ObscuredPrefs.SetString("IsLost", DateTime.Now.AddMinutes(10).ToString());
+
         }
         else if(correct <= 8) {
             //2 stars
@@ -307,6 +311,7 @@ public class QuizeManager : MonoBehaviour
                 unAnswered = new List<Questions>(answereds);
                 answereds.Clear();
                 correct = 0;
+                ObscuredPrefs.SetString("IsLost", "");
                 questionCanvas.SetActive(true);
                 finishedCanvas.SetActive(false);
             }

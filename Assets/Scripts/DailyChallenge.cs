@@ -3,6 +3,7 @@ using System.Collections;
 using System;
 using UnityEngine;
 using UnityEngine.UI;
+using CodeStage.AntiCheat.ObscuredTypes;
 using CodeStage.AntiCheat.Storage;
 using Random = UnityEngine.Random;
 
