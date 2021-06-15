@@ -6,6 +6,7 @@ using UnityEngine.UI;
 using CodeStage.AntiCheat.ObscuredTypes;
 using CodeStage.AntiCheat.Storage;
 using Random = UnityEngine.Random;
+using UnityEngine.SceneManagement;
 
 public class QuizeManager : MonoBehaviour
 {
@@ -45,6 +46,12 @@ public class QuizeManager : MonoBehaviour
     private int correct = 0;
     private bool quizeTimeStart = false;
 
+    string NameStars;
+    public int MinTrue;
+    public int NormTrue;
+    public int MaxTrue;
+    public GameObject[] Stars;
+    int NumStars = 0;
     float timer;
     bool isStarted = false;
     DateTime pauseDateTime;
@@ -58,6 +65,12 @@ public class QuizeManager : MonoBehaviour
     }
     private void Start() {
         isStarted = true;
+        NameStars = "stars" + SceneManager.GetActiveScene().name;
+        print("First Stars: "+NameStars);
+        for (int j = 0; j < Stars.Length; j++)
+        {
+            Stars[j].SetActive(false);
+        }
     }
     private void OnApplicationPause(bool pause) {
         if(isStarted) {
@@ -247,6 +260,10 @@ public class QuizeManager : MonoBehaviour
         if(correct <= 4 && correct >= 0) {
             //1 star
             //should wait 10 minute and 0 coin
+            UpdateMaxLevel();
+            NumStars += 1;
+            Stars[0].SetActive(true);
+            print("1 Star!");
             coinEarned.text = "" + 0;
             quizeTimeStart = true;
             if(WorldTimeAPI.Instance.IsTimeLoaded)
@@ -257,24 +274,48 @@ public class QuizeManager : MonoBehaviour
         }
         else if(correct <= 8) {
             //2 stars
+            UpdateMaxLevel();
+            NumStars += 2;
+            Stars[0].SetActive(true);
+            Stars[1].SetActive(true);
+            print("2 Star!");
             ObscuredPrefs.SetInt("Coin", ObscuredPrefs.GetInt("Coin") + 15);
             coinEarned.text = "" + 15;
         }
         else if(correct == 9) {
+            UpdateMaxLevel();
+            NumStars += 3;
+            Stars[0].SetActive(true);
+            Stars[1].SetActive(true);
+            Stars[2].SetActive(true);
+            print("3 Star!");
             //3 stars
             ObscuredPrefs.SetInt("Coin", ObscuredPrefs.GetInt("Coin") + 25);
             coinEarned.text = "" + 25;
         }
         else if(correct == 10) {
-            if(UsedHelp()) {
+            UpdateMaxLevel();
+            NumStars += 3;
+            Stars[0].SetActive(true);
+            Stars[1].SetActive(true);
+            Stars[2].SetActive(true);
+            print("3 Star!");
+            if (UsedHelp()) {
                 ObscuredPrefs.SetInt("Coin", ObscuredPrefs.GetInt("Coin") + 25);
                 coinEarned.text = "" + 25;
             }
 
             else {
+                UpdateMaxLevel();
                 ObscuredPrefs.SetInt("Coin", ObscuredPrefs.GetInt("Coin") + 40);
                 coinEarned.text = "" + 40;
             }
+            
+        }
+        if (NumStars >= ObscuredPrefs.GetInt(NameStars, 0))
+        {
+            ObscuredPrefs.SetInt(NameStars, NumStars);
+
         }
     }
     private bool UsedHelp() {
@@ -291,7 +332,10 @@ public class QuizeManager : MonoBehaviour
         CalculateCoin();
         finalCoin.text = "" + ObscuredPrefs.GetInt("Coin");
         delete2Answers.interactable = true;
+
+        
     }
+
     public void Restart() {
         if(quizeTimeStart) {
             if(ObscuredPrefs.GetInt("LostHeart") < 5) {
@@ -327,6 +371,16 @@ public class QuizeManager : MonoBehaviour
             questionCanvas.SetActive(true);
             finishedCanvas.SetActive(false);
         }
+    }
+    private void UpdateMaxLevel()
+    {
+        print("build: " + (SceneManager.GetActiveScene().buildIndex - 3) + "Max: " + ObscuredPrefs.GetInt("MaxLevel"));
+        if (SceneManager.GetActiveScene().buildIndex - 3 == ObscuredPrefs.GetInt("MaxLevel"))
+        {
+            ObscuredPrefs.SetInt("MaxLevel", ObscuredPrefs.GetInt("MaxLevel") + 1);
+
+        }
+
     }
     private void Update() {//developer
         if(Input.GetKeyDown(KeyCode.S)) {

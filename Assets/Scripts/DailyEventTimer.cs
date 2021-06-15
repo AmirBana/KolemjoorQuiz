@@ -54,7 +54,7 @@ public class DailyEventTimer : MonoBehaviour
 
     void Update()
     {
-        IsPlayed = ObscuredPrefs.GetBool("IsPlayed");print(IsPlayed);
+        IsPlayed = ObscuredPrefs.GetBool("IsPlayed");//print(IsPlayed);
         if (timerSet)
         {
 
