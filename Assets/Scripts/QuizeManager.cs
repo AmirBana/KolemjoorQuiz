@@ -261,7 +261,7 @@ public class QuizeManager : MonoBehaviour
             //1 star
             //should wait 10 minute and 0 coin
             UpdateMaxLevel();
-            NumStars += 1;
+            NumStars = 1;
             Stars[0].SetActive(true);
             print("1 Star!");
             coinEarned.text = "" + 0;
@@ -275,7 +275,7 @@ public class QuizeManager : MonoBehaviour
         else if(correct <= 8) {
             //2 stars
             UpdateMaxLevel();
-            NumStars += 2;
+            NumStars = 2;
             Stars[0].SetActive(true);
             Stars[1].SetActive(true);
             print("2 Star!");
@@ -284,7 +284,7 @@ public class QuizeManager : MonoBehaviour
         }
         else if(correct == 9) {
             UpdateMaxLevel();
-            NumStars += 3;
+            NumStars = 3;
             Stars[0].SetActive(true);
             Stars[1].SetActive(true);
             Stars[2].SetActive(true);
@@ -295,7 +295,7 @@ public class QuizeManager : MonoBehaviour
         }
         else if(correct == 10) {
             UpdateMaxLevel();
-            NumStars += 3;
+            NumStars = 3;
             Stars[0].SetActive(true);
             Stars[1].SetActive(true);
             Stars[2].SetActive(true);
@@ -312,10 +312,19 @@ public class QuizeManager : MonoBehaviour
             }
             
         }
-        if (NumStars >= ObscuredPrefs.GetInt(NameStars, 0))
+        print("-------------------");
+        print(NumStars);
+        print(ObscuredPrefs.GetInt(NameStars, 0));
+        print(NameStars);
+        print("-------------------");
+        if (NumStars >= ObscuredPrefs.GetInt(NameStars,0))
         {
             ObscuredPrefs.SetInt(NameStars, NumStars);
 
+        }
+        else
+        {
+            print("no equal num stars and get stars");
         }
     }
     private bool UsedHelp() {

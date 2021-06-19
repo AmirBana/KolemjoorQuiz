@@ -19,11 +19,13 @@ public class LevelControl : MonoBehaviour
     public string LevelName;
     string address;
     int NumOfStars;
+
+
     // Start is called before the first frame update
     private void Awake()
     {
         DisableStars();
-           EditorBuildSettingsScene[] AllScene = EditorBuildSettings.scenes;
+        EditorBuildSettingsScene[] AllScene = EditorBuildSettings.scenes;
         names = new string[AllScene.Length];
         for (int k = 0; k < AllScene.Length; k++)
         {
@@ -31,7 +33,7 @@ public class LevelControl : MonoBehaviour
         }
 
         LevelName = names[CurrentLevel+ 3];
-         address = "stars" + LevelName;
+        address = "stars" + LevelName;
         //print("Compare: " + address);
     }
     
@@ -101,27 +103,3 @@ public class LevelControl : MonoBehaviour
         
     }
 }
-/*
- *     LevelsUnlocked = ObscuredPrefs.GetInt("LevelsUnlockedPart1", 1);
-        for (int i = 0; i < Buttons.Length; i++)
-        {
-            Buttons[i].interactable = false;
-            Buttons[i].transform.GetChild(0).gameObject.SetActive(true); //lock
-
-            Buttons[i].transform.GetChild(1).gameObject.SetActive(false); //star01
-            Buttons[i].transform.GetChild(2).gameObject.SetActive(false); //star02
-            Buttons[i].transform.GetChild(3).gameObject.SetActive(false); //start03
-            
-        }
-        for (int i = 0; i < LevelsUnlocked; i++)
-        {
-            Buttons[i].interactable = true;
-            Buttons[i].transform.GetChild(0).gameObject.SetActive(false); //lock
-
-            Buttons[i].transform.GetChild(1).gameObject.SetActive(true); //star01
-            Buttons[i].transform.GetChild(2).gameObject.SetActive(true); //star02
-            Buttons[i].transform.GetChild(3).gameObject.SetActive(true); //start03
-        }
-        
- * 
- * */
