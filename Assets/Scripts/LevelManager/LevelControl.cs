@@ -19,21 +19,27 @@ public class LevelControl : MonoBehaviour
     public string LevelName;
     string address;
     int NumOfStars;
-
+    public int NumPart;
 
     // Start is called before the first frame update
     private void Awake()
     {
         DisableStars();
+        /*
         EditorBuildSettingsScene[] AllScene = EditorBuildSettings.scenes;
         names = new string[AllScene.Length];
         for (int k = 0; k < AllScene.Length; k++)
         {
             names[k] = Path.GetFileNameWithoutExtension(AllScene[k].path);
         }
+        */
+        //LevelName = names[CurrentLevel+ 3];
+        //address = "stars" + LevelName;
+        address = "stars" + "Part0" + NumPart + "Level" + CurrentLevel;
+        print(address);
 
-        LevelName = names[CurrentLevel+ 3];
-        address = "stars" + LevelName;
+
+
         //print("Compare: " + address);
     }
     

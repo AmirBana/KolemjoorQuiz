@@ -574,6 +574,7 @@ MonoBehaviour:
   - {fileID: 1247509028}
   CurrentLevel: 1
   LevelName: 
+  NumPart: 1
 --- !u!1001 &356518203
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2054,6 +2055,7 @@ MonoBehaviour:
   Stars: []
   CurrentLevel: 0
   LevelName: 
+  NumPart: 0
 --- !u!1 &924905810
 GameObject:
   m_ObjectHideFlags: 0
@@ -2618,6 +2620,7 @@ MonoBehaviour:
   - {fileID: 498209431}
   CurrentLevel: 2
   LevelName: 
+  NumPart: 1
 --- !u!114 &1176468814
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3078,6 +3081,7 @@ MonoBehaviour:
   - {fileID: 47319847}
   CurrentLevel: 3
   LevelName: 
+  NumPart: 1
 --- !u!114 &1375906643
 MonoBehaviour:
   m_ObjectHideFlags: 0

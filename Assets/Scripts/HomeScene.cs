@@ -34,4 +34,11 @@ public class HomeScene : MonoBehaviour
         chanceWheel.GetComponent<Canvas>().sortingOrder = -6;
     }
 
+    public void ClearAll()
+    {
+        ObscuredPrefs.DeleteAll();
+        userScoreTxt.text = "" + ObscuredPrefs.GetInt("Score");
+        userCoinTxt.text = "" + ObscuredPrefs.GetInt("Coin");
+    }
+
 }

@@ -190,10 +190,15 @@ public class SpinWheel : MonoBehaviour
 				print( "Priiiiiz: "+_prize[itemNumber].allPrize);
 				CoinControl.ManageCoin(_prize[itemNumber].allPrize);
 			}
-			userScoreTxt.text = "" + ObscuredPrefs.GetInt("Score");
-			userCoinTxt.text = "" + ObscuredPrefs.GetInt("Coin");
+			Invoke("UpdateCoin", 5 * randomTime);
 			StartCoroutine(SpinTheWheel(5 * randomTime, maxAngle));
 			ObscuredPrefs.SetBool("IsPlayed", true);
 		}
+	}
+	void UpdateCoin()
+    {
+		userScoreTxt.text = "" + ObscuredPrefs.GetInt("Score");
+		userCoinTxt.text = "" + ObscuredPrefs.GetInt("Coin");
+		print("Update");
 	}
 	} 

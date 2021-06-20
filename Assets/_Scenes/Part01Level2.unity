@@ -2671,7 +2671,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   unAnswered:
-  - question: "\uFE96\uFEB3\uFE8E\uFEA0\uFB90 \uFE8E\uFEA0\uFEE8\uFBFE\uFE8D 3"
+  - question: "\uFE96\uFEB3\uFE8E\uFEA0\uFB90 \uFE8E\uFEA0\uFEE8\uFBFE\uFE8D 2"
     answers:
     - answer: "\uFEDD\uFEEE\uFED3\uFEAF\uFEA9"
       isCorrect: 1
@@ -2681,7 +2681,7 @@ MonoBehaviour:
       isCorrect: 0
     - answer: "\uFEB0\uFBFE\uFEAE\uFE92\uFE97"
       isCorrect: 0
-  - question: Hi there 3
+  - question: Hi there 2
     answers:
     - answer: hi
       isCorrect: 1
@@ -2691,7 +2691,7 @@ MonoBehaviour:
       isCorrect: 0
     - answer: how're you
       isCorrect: 0
-  - question: 4+5!=  3
+  - question: 4+5!=  2
     answers:
     - answer: 9
       isCorrect: 1
@@ -2701,7 +2701,7 @@ MonoBehaviour:
       isCorrect: 0
     - answer: 12/3
       isCorrect: 0
-  - question: what is this
+  - question: what is this 2
     answers:
     - answer: a quize game
       isCorrect: 1
@@ -2711,7 +2711,8 @@ MonoBehaviour:
       isCorrect: 0
     - answer: idk
       isCorrect: 0
-  - question: "\u061F\uFE96\uFEB3\uFE8E\uFEA0\uFB90 \uFEE5\uFE8D\uFEAE\uFBFE\uFE8D"
+  - question: "\u061F\uFE96\uFEB3\uFE8E\uFEA0\uFB90 \uFEE5\uFE8D\uFEAE\uFBFE\uFE8D
+      2"
     answers:
     - answer: "\uFE8E\uFBFF\uFEB3\uFE81"
       isCorrect: 1
@@ -2721,7 +2722,7 @@ MonoBehaviour:
       isCorrect: 0
     - answer: "\uFE8E\uFB91\uFBFE\uFEAE\uFEE3\uFE81"
       isCorrect: 0
-  - question: aa
+  - question: aa 2
     answers:
     - answer: ss
       isCorrect: 1
@@ -2731,7 +2732,7 @@ MonoBehaviour:
       isCorrect: 0
     - answer: aa
       isCorrect: 0
-  - question: bb
+  - question: ' bb 2'
     answers:
     - answer: vv
       isCorrect: 1
@@ -2741,7 +2742,7 @@ MonoBehaviour:
       isCorrect: 0
     - answer: ss
       isCorrect: 0
-  - question: rr
+  - question: rr 2
     answers:
     - answer: tt
       isCorrect: 1
@@ -5405,6 +5406,22 @@ PrefabInstance:
       propertyPath: m_Name
       value: Question
       objectReference: {fileID: 0}
+    - target: {fileID: 4740821994097072855, guid: 8434122156d1660458ce0d8f163480c8, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4740821994097072855, guid: 8434122156d1660458ce0d8f163480c8, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4740821994097072855, guid: 8434122156d1660458ce0d8f163480c8, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4740821994097072855, guid: 8434122156d1660458ce0d8f163480c8, type: 3}
+      propertyPath: m_FontData.m_Font
+      value: 
+      objectReference: {fileID: 12800000, guid: e3f4de319a2daf445bba7dbc43e36255, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8434122156d1660458ce0d8f163480c8, type: 3}
 --- !u!1001 &4823588003532277375
