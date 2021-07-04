@@ -11,20 +11,16 @@ using UnityEngine.UI;
 
 
 
-public class DailyEventTimer : MonoBehaviour
+public class NewTimerForCircle : MonoBehaviour
 {
 
 	public Button timerButton;
 
 	public Text timeLabel;
 
-	public string StartTime;
-
-	public string EndTime;
+	public string Time24H;
 
 	private double tcounter;
-
-	private TimeSpan eventStartTime;
 
 	private TimeSpan eventEndTime;
 
@@ -42,19 +38,19 @@ public class DailyEventTimer : MonoBehaviour
 
 	public bool IsRedayChance;
 
-
-
-
+	public string set24;
+	private TimeSpan Span24;
+	double countt;
+	double t;
 
 	void Start()
 	{
 
-		eventStartTime = TimeSpan.Parse(StartTime);
-
-		eventEndTime = TimeSpan.Parse(EndTime);
-
+		eventEndTime = TimeSpan.Parse(Time24H);
+		countIsReady2 = false;
 		StartCoroutine("CheckTime");
-
+		Span24 = TimeSpan.Parse(set24);
+		t = Span24.TotalSeconds;
 	}
 
 
@@ -108,21 +104,22 @@ public class DailyEventTimer : MonoBehaviour
 	void Update()
 
 	{
+		double countt = t - Time.deltaTime;
+		t -= countt;
+		//Debug.Log(countt - Time.deltaTime );
+		TimeSpan tempc = TimeSpan.FromSeconds(t);
+		string Timeformat2 = string.Format("{0:D2}:{1:D2}:{2:D2}", tempc.Hours, tempc.Minutes, tempc.Seconds);
+		print(Timeformat2);
+		//print(Timeformat2);
 
-		if (timerSet)
+		if (timerSet && ObscuredPrefs.GetBool("IsPlayed"))
+	
+
 
 		{
-            if (currentTime == eventStartTime)
-            {
-				ObscuredPrefs.SetBool("IsPlayed", false);
+			//this means the event as already started and players can click and join
 
-			}
-
-			if (currentTime >= eventStartTime && currentTime <= eventEndTime)
-
-			{//this means the event as already started and players can click and join
-
-				_remainingTime = eventEndTime.Subtract(currentTime);
+			_remainingTime = eventEndTime.Subtract(currentTime);
 
 				tcounter = _remainingTime.TotalMilliseconds;
 
@@ -131,44 +128,21 @@ public class DailyEventTimer : MonoBehaviour
 
 
 
-			}
-			else if (currentTime < eventStartTime)
-
-			{//this means the event had not started yet for today
-
-				_remainingTime = eventStartTime.Subtract(currentTime);
-
-				tcounter = _remainingTime.TotalMilliseconds;
-
-				countIsReady = true;
-				IsRedayChance = false;
-				ObscuredPrefs.SetBool("IsPlayed", false);
-
-
-			}
-			else
-
-			{//the event as already passed
-
-				disableButton("به پایان رسید! منتظر شروع مجدد باشيد!");
-
-			}
-
+			
+			
 		}
 
 
 
-
-		if (countIsReady) { startCountdown(); }
 
 		if (countIsReady2) { startCountdown2(); }
-        if (ObscuredPrefs.GetBool("IsPlayed"))
-        {
+		if (ObscuredPrefs.GetBool("IsPlayed"))
+		{
 			disableButton("You Turn Wheel ");
-
+			startCountdown2();
 			//Invoke("startCountdown", 4f);
 		}
-       
+
 
 	}
 
@@ -192,30 +166,6 @@ public class DailyEventTimer : MonoBehaviour
 
 
 
-	private void startCountdown()
-
-	{
-
-		timerSet = false;
-
-		tcounter -= Time.deltaTime * 1000;
-
-		disableButton("به زودی : " + GetRemainingTime(tcounter));
-
-
-
-		if (tcounter <= 0)
-		{
-
-			countIsReady = false;
-
-			validateTime();
-
-		}
-
-	}
-
-
 
 	private void startCountdown2()
 
@@ -233,8 +183,9 @@ public class DailyEventTimer : MonoBehaviour
 		{
 
 			countIsReady2 = false;
-
-			validateTime();
+			ObscuredPrefs.SetBool("IsPlayed", true);
+			//validateTime();
+			//print("HEEEEEEEEEEEEEEEEEEEEEEEEEEy");
 
 		}
 
