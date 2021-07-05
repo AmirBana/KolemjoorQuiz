@@ -1870,17 +1870,6 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: 0
---- !u!114 &688844142 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 4740821994097072855, guid: 8434122156d1660458ce0d8f163480c8, type: 3}
-  m_PrefabInstance: {fileID: 4740821994751997881}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &707222529
 GameObject:
   m_ObjectHideFlags: 0
@@ -2550,6 +2539,45 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 987379527}
   m_CullTransparentMesh: 1
+--- !u!1 &1001906014 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 528243110388250827, guid: 8e8d4bb715fc06a4f8f3d01dd521f483, type: 3}
+  m_PrefabInstance: {fileID: 528243108884951845}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1001906016
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1001906014}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a4bde79e34a564d4180a115864f98c20, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FontData:
+    m_Font: {fileID: 12800000, guid: e3f4de319a2daf445bba7dbc43e36255, type: 3}
+    m_FontSize: 38
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 3
+    m_MaxSize: 43
+    m_Alignment: 4
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: "\u062F\u06A9\u0645\u0647"
 --- !u!1 &1073413304
 GameObject:
   m_ObjectHideFlags: 0
@@ -2671,108 +2699,138 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   unAnswered:
-  - question: "\uFE96\uFEB3\uFE8E\uFEA0\uFB90 \uFE8E\uFEA0\uFEE8\uFBFE\uFE8D 2"
+  - question: "\u06A9\u062F\u0627\u0645 \u0627\u0633\u062A\u0627\u0646 \u0647\u0627
+      \u0647\u0645\u0633\u0627\u064A\u0647 \u062F\u0632\u0641\u0648\u0644 \u0647\u0633\u062A\u0646\u062F\u061F"
     answers:
-    - answer: "\uFEDD\uFEEE\uFED3\uFEAF\uFEA9"
+    - answer: "\u0644\u0631\u0633\u062A\u0627\u0646 - \u0627\u064A\u0644\u0627\u0645"
+      isCorrect: 0
+    - answer: "\u0627\u064A\u0644\u0627\u0645 - \u0686\u0647\u0627\u0631\u0645\u062D\u0627\u0644
+        \u0648 \u0628\u062E\u062A\u064A\u0627\u0631\u064A"
+      isCorrect: 0
+    - answer: "\u0644\u0631\u0633\u062A\u0627\u0646 - \u0686\u0647\u0627\u0631\u0645\u062D\u0627\u0644
+        \u0648 \u0628\u062E\u062A\u064A\u0627\u0631\u064A"
       isCorrect: 1
-    - answer: "\uFEE5\uFE8D\uFEAE\uFEEC\uFE97"
+    - answer: "\u0627\u064A\u0644\u0627\u0645 - \u0644\u0631\u0633\u062A\u0627\u0646"
       isCorrect: 0
-    - answer: "\uFEAF\uFE8D\uFEEE\uFEEB\uFE8D"
-      isCorrect: 0
-    - answer: "\uFEB0\uFBFE\uFEAE\uFE92\uFE97"
-      isCorrect: 0
-  - question: Hi there 2
+  - question: "\u062F\u0698 \u0645\u0645\u062F\u0644\u064A \u062E\u0627\u0646 \u0648
+      \u0647\u0641\u062A \u062A\u0646\u0627\u0646 \u0628\u0647 \u062A\u0631\u062A\u064A\u0628
+      \u062F\u0631 \u06A9\u062F\u0627\u0645 \u0628\u062E\u0634 \u0647\u0627\u064A
+      \u0634\u0647\u0631\u0633\u062A\u0627\u0646 \u062F\u0632\u0641\u0648\u0644 \u0642\u0631\u0627\u0631
+      \u062F\u0627\u0631\u0646\u062F\u061F"
     answers:
-    - answer: hi
+    - answer: "\u0633\u0631\u062F\u0634\u062A \u2013 \u0634\u0647\u064A\u0648\u0646"
+      isCorrect: 0
+    - answer: "\u0633\u0631\u062F\u0634\u062A \u2013 \u0633\u0631\u062F\u0634\u062A"
       isCorrect: 1
-    - answer: bye
+    - answer: "\u0634\u0647\u064A\u0648\u0646 \u2013 \u0634\u0647\u064A\u0648\u0646"
       isCorrect: 0
-    - answer: hello
+    - answer: "\u0634\u0647\u064A\u0648\u0646 \u2013 \u0633\u0631\u062F\u0634\u062A"
       isCorrect: 0
-    - answer: how're you
-      isCorrect: 0
-  - question: 4+5!=  2
+  - question: "\u062F\u0631\u0647 \u06A9\u0648\u0644 \u062E\u0631\u0633\u0627\u0646
+      \u062F\u0631 \u0645\u062D\u062F\u0648\u062F\u0647 \u06A9\u062F\u0627\u0645
+      \u0628\u062E\u0634 \u0634\u0647\u0631\u0633\u062A\u0627\u0646 \u0642\u0631\u0627\u0631
+      \u062F\u0627\u0631\u062F\u061F"
     answers:
-    - answer: 9
+    - answer: "\u0634\u0647\u064A\u0648\u0646"
       isCorrect: 1
-    - answer: --9
+    - answer: "\u0633\u0631\u062F\u0634\u062A "
       isCorrect: 0
-    - answer: 18/2
+    - answer: "\u0645\u0631\u06A9\u0632\u064A"
       isCorrect: 0
-    - answer: 12/3
+    - answer: "\u0686\u063A\u0627\u0645\u064A\u0634"
       isCorrect: 0
-  - question: what is this 2
+  - question: "\u06A9\u0648\u0644 \u062E\u0631\u0633\u0627\u0646 \u0628\u0647 \u0686\u0647
+      \u0646\u0627\u0645\u064A \u0645\u0639\u0631\u0648\u0641 \u0627\u0633\u062A\u061F"
     answers:
-    - answer: a quize game
+    - answer: "\u0622\u0628\u0634\u0627\u0631 \u062E\u0648\u0646\u064A\u0646"
+      isCorrect: 0
+    - answer: "\u062F\u0631\u0647 \u0627\u0631\u0648\u0627\u062D"
       isCorrect: 1
-    - answer: nothing
+    - answer: "\u062F\u0631\u0647 \u0631\u0646\u06AF\u064A\u0646 \u06A9\u0645\u0627\u0646\u064A"
       isCorrect: 0
-    - answer: something
+    - answer: "\u0686\u0634\u0645\u0647 \u0632\u064A\u0631 \u0632\u0645\u064A\u0646\u064A"
       isCorrect: 0
-    - answer: idk
-      isCorrect: 0
-  - question: "\u061F\uFE96\uFEB3\uFE8E\uFEA0\uFB90 \uFEE5\uFE8D\uFEAE\uFBFE\uFE8D
-      2"
+  - question: "\u062F\u0648\u0645\u064A\u0646 \u0645\u0633\u062C\u062F \u0642\u062F\u064A\u0645\u064A
+      \u062F\u0632\u0641\u0648\u0644 \u06A9\u062F\u0627\u0645 \u0627\u0633\u062A\u061F"
     answers:
-    - answer: "\uFE8E\uFBFF\uFEB3\uFE81"
+    - answer: "\u0645\u0633\u062C\u062F \u0641\u0648\u0644\u0627\u062F\u064A\u0627\u0646"
+      isCorrect: 0
+    - answer: "\u0645\u0633\u062C\u062F \u0627\u0645\u0627\u0645 \u062E\u0645\u064A\u0646\u064A
+        (\u0631\u0647)"
+      isCorrect: 0
+    - answer: "\u0645\u0633\u062C\u062F \u0645\u0644\u0627\u062D\u0627\u062C\u064A"
+      isCorrect: 0
+    - answer: "\u0644\u0628 \u062E\u0646\u062F\u0642"
       isCorrect: 1
-    - answer: "\uFE8E\uFB58\uFEED\uFEAD\uFE8D"
-      isCorrect: 0
-    - answer: "\uFE8E\uFED8\uFBFE\uFEAE\uFED3\uFE81"
-      isCorrect: 0
-    - answer: "\uFE8E\uFB91\uFBFE\uFEAE\uFEE3\uFE81"
-      isCorrect: 0
-  - question: aa 2
+  - question: "\u0627\u0632 \u0645\u062D\u0644\u0647 \u0647\u0627\u064A \u0627\u0635\u064A\u0644
+      \u0648 \u0642\u062F\u064A\u0645\u064A \u062F\u0632\u0641\u0648\u0644 \u0627\u0633\u062A\u061F"
     answers:
-    - answer: ss
+    - answer: "\u0633\u064A\u0627\u0647\u067E\u0648\u0634\u0627\u0646"
+      isCorrect: 0
+    - answer: "\u06A9\u0631\u0646\u0627\u0633\u064A\u0648\u0646"
+      isCorrect: 0
+    - answer: "\u0635\u062D\u0631\u0627\u0628\u062F\u0631 \u0645\u063A\u0631\u0628\u064A"
       isCorrect: 1
-    - answer: dd
+    - answer: "\u062D\u064A\u062F\u0631\u062E\u0627\u0646\u0647"
       isCorrect: 0
-    - answer: cc
-      isCorrect: 0
-    - answer: aa
-      isCorrect: 0
-  - question: ' bb 2'
+  - question: "\u062F\u0648 \u062A\u0646 \u0627\u0632 313 \u064A\u0627\u0631\u0627\u0646
+      \u062E\u0627\u0635\u0647 \u0627\u0645\u0627\u0645 \u0632\u0645\u0627\u0646
+      (\u0639\u062C) \u062F\u0631 \u0627\u064A\u0646 \u0645\u06A9\u0627\u0646 \u0645\u062F\u0641\u0648\u0646
+      \u0647\u0633\u062A\u0646\u062F\u061F"
     answers:
-    - answer: vv
+    - answer: "\u0622\u0633\u062A\u0627\u0646 \u0645\u062A\u0628\u0631\u06A9\u0647
+        \u0633\u0628\u0632\u0642\u0628\u0627 (\u0639)"
+      isCorrect: 0
+    - answer: "\u0645\u0633\u062C\u062F \u06A9\u062C\u0628\u0627\u0641\u0627\u0646"
       isCorrect: 1
-    - answer: cc
+    - answer: "\u0645\u0633\u062C\u062F \u062C\u0627\u0645\u0639"
       isCorrect: 0
-    - answer: bb
+    - answer: "\u0622\u0631\u0627\u0645\u06AF\u0627\u0647 \u0645\u062D\u0645\u062F
+        \u0628\u0646 \u062C\u0639\u0641\u0631 \u0637\u064A\u0627\u0631 (\u0639)"
       isCorrect: 0
-    - answer: ss
-      isCorrect: 0
-  - question: rr 2
+  - question: "\u0627\u0648\u0644\u064A\u0646 \u0648 \u0642\u062F\u064A\u0645\u064A
+      \u062A\u0631\u064A\u0646 \u0645\u0633\u062C\u062F \u062F\u0632\u0641\u0648\u0644
+      \u06A9\u062F\u0627\u0645 \u0627\u0633\u062A\u061F"
     answers:
-    - answer: tt
+    - answer: "\u0627\u064A\u0648\u0627\u0646 \u062C\u0644\u0648\u064A \u063A\u0631\u064A\u0628
+        \u062E\u0627\u0646\u0647"
+      isCorrect: 0
+    - answer: "\u0642\u0633\u0645\u062A \u0646\u0645\u0627\u0632\u062E\u0627\u0646\u0647"
+      isCorrect: 0
+    - answer: "\u0642\u0633\u0645\u062A \u062C\u0646\u0648\u0628\u064A"
+      isCorrect: 0
+    - answer: "\u0627\u062A\u0627\u0642 \u0634\u0631\u0642\u064A"
       isCorrect: 1
-    - answer: rr
-      isCorrect: 0
-    - answer: yy
-      isCorrect: 0
-    - answer: uu
-      isCorrect: 0
-  - question: gg
+  - question: "\u0646\u0627\u0645 \u062F\u064A\u06AF\u0631 \u0627\u062A\u0627\u0642
+      \u0634\u0631\u0642\u064A \u0645\u0633\u062C\u062F \u062C\u0627\u0645\u0639
+      \u0686\u064A\u0633\u062A\u061F"
     answers:
-    - answer: gg
+    - answer: "\u0622\u062C\u0631\u0646\u06AF\u0627\u0631\u0647"
+      isCorrect: 0
+    - answer: "\u0645\u0646\u0627\u0631\u0647"
+      isCorrect: 0
+    - answer: "\u0686\u0647\u0627\u0631\u0633\u062A\u0648\u0646"
+      isCorrect: 0
+    - answer: "\u063A\u0631\u064A\u0628 \u062E\u0627\u0646\u0647"
       isCorrect: 1
-    - answer: ff
-      isCorrect: 0
-    - answer: dd
-      isCorrect: 0
-    - answer: ss
-      isCorrect: 0
-  - question: hh
+  - question: "\u0622\u0631\u0627\u0645\u06AF\u0627\u0647 \u06A9\u062F\u0627\u0645
+      \u062F\u0627\u0646\u0634\u0645\u0646\u062F \u062F\u064A\u0646 \u062F\u0631
+      \u0632\u064A\u0631 \u0634\u0628\u0633\u062A\u0627\u0646 \u0628\u0632\u0631\u06AF
+      \u0645\u0633\u062C\u062F \u062C\u0627\u0645\u0639 \u0642\u0631\u0627\u0631
+      \u062F\u0627\u0631\u062F\u061F"
     answers:
-    - answer: gg
+    - answer: "\u0633\u064A\u062F \u0645\u0647\u062F\u064A \u0637\u0628\u064A\u0628"
+      isCorrect: 0
+    - answer: "\u0633\u064A\u062F \u0627\u0628\u0648\u0627\u0644\u0642\u0627\u0633\u0645
+        \u0627\u062D\u0645\u062F\u064A"
+      isCorrect: 0
+    - answer: "\u0633\u064A\u062F \u0639\u0628\u062F\u0627\u0644\u0628\u0627\u0642\u064A
+        \u0622\u0642\u0627\u0645\u064A\u0631"
       isCorrect: 1
-    - answer: hh
+    - answer: "\u0622\u064A\u062A \u0627\u0644\u0647 \u0633\u064A\u062F \u0645\u062D\u0645\u0648\u062F
+        \u0634\u0631\u064A\u0639\u062A\u064A"
       isCorrect: 0
-    - answer: jj
-      isCorrect: 0
-    - answer: nn
-      isCorrect: 0
-  questionTxt: {fileID: 688844142}
+  questionTxt: {fileID: 1600104126}
   answerBtns:
   - {fileID: 1757527362}
   - {fileID: 1757462672}
@@ -2825,6 +2883,45 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 6547308778821649041, guid: 4a9d46d38c337c84f8fa8203bfc8425b, type: 3}
   m_PrefabInstance: {fileID: 6547308779860497332}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1187506121 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 528243108946493713, guid: 8e8d4bb715fc06a4f8f3d01dd521f483, type: 3}
+  m_PrefabInstance: {fileID: 528243108884951845}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1187506123
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1187506121}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a4bde79e34a564d4180a115864f98c20, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FontData:
+    m_Font: {fileID: 12800000, guid: e3f4de319a2daf445bba7dbc43e36255, type: 3}
+    m_FontSize: 38
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 3
+    m_MaxSize: 43
+    m_Alignment: 4
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: "\u062F\u06A9\u0645\u0647"
 --- !u!224 &1209524208 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 4823588004741732751, guid: 1ece1fb90a776cf4bae89df6e536b046, type: 3}
@@ -2920,6 +3017,45 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1284807016}
   m_CullTransparentMesh: 1
+--- !u!1 &1290505492 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 528243108915875039, guid: 8e8d4bb715fc06a4f8f3d01dd521f483, type: 3}
+  m_PrefabInstance: {fileID: 528243108884951845}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1290505494
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1290505492}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a4bde79e34a564d4180a115864f98c20, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FontData:
+    m_Font: {fileID: 12800000, guid: e3f4de319a2daf445bba7dbc43e36255, type: 3}
+    m_FontSize: 38
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 3
+    m_MaxSize: 43
+    m_Alignment: 4
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: "\u062F\u06A9\u0645\u0647"
 --- !u!1 &1299027344
 GameObject:
   m_ObjectHideFlags: 0
@@ -3374,6 +3510,45 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1357763556}
   m_CullTransparentMesh: 1
+--- !u!1 &1368322107 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 528243110704917571, guid: 8e8d4bb715fc06a4f8f3d01dd521f483, type: 3}
+  m_PrefabInstance: {fileID: 528243108884951845}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1368322109
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1368322107}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a4bde79e34a564d4180a115864f98c20, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FontData:
+    m_Font: {fileID: 12800000, guid: e3f4de319a2daf445bba7dbc43e36255, type: 3}
+    m_FontSize: 38
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 3
+    m_MaxSize: 43
+    m_Alignment: 4
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: "\u062F\u06A9\u0645\u0647"
 --- !u!1 &1383060091
 GameObject:
   m_ObjectHideFlags: 0
@@ -3835,6 +4010,45 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1599887640}
   m_CullTransparentMesh: 1
+--- !u!1 &1600104123 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4740821994097072853, guid: 8434122156d1660458ce0d8f163480c8, type: 3}
+  m_PrefabInstance: {fileID: 4740821994751997881}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1600104126
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1600104123}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a4bde79e34a564d4180a115864f98c20, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FontData:
+    m_Font: {fileID: 12800000, guid: e3f4de319a2daf445bba7dbc43e36255, type: 3}
+    m_FontSize: 37
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 10
+    m_MaxSize: 40
+    m_Alignment: 4
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: "\u0633\u0648\u0627\u0644\u0627\u062A"
 --- !u!1 &1622963540
 GameObject:
   m_ObjectHideFlags: 0
@@ -5221,6 +5435,70 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 354128107}
     m_Modifications:
+    - target: {fileID: 528243108915875038, guid: 8e8d4bb715fc06a4f8f3d01dd521f483, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0.94400007
+      objectReference: {fileID: 0}
+    - target: {fileID: 528243108915875038, guid: 8e8d4bb715fc06a4f8f3d01dd521f483, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0.90400004
+      objectReference: {fileID: 0}
+    - target: {fileID: 528243108915875038, guid: 8e8d4bb715fc06a4f8f3d01dd521f483, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0.03777005
+      objectReference: {fileID: 0}
+    - target: {fileID: 528243108915875038, guid: 8e8d4bb715fc06a4f8f3d01dd521f483, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0.125
+      objectReference: {fileID: 0}
+    - target: {fileID: 528243108915875038, guid: 8e8d4bb715fc06a4f8f3d01dd521f483, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: -1.196701
+      objectReference: {fileID: 0}
+    - target: {fileID: 528243108915875038, guid: 8e8d4bb715fc06a4f8f3d01dd521f483, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 3.7518005
+      objectReference: {fileID: 0}
+    - target: {fileID: 528243108915875038, guid: 8e8d4bb715fc06a4f8f3d01dd521f483, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0.67419434
+      objectReference: {fileID: 0}
+    - target: {fileID: 528243108915875038, guid: 8e8d4bb715fc06a4f8f3d01dd521f483, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 1.9802017
+      objectReference: {fileID: 0}
+    - target: {fileID: 528243108946493712, guid: 8e8d4bb715fc06a4f8f3d01dd521f483, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0.94200003
+      objectReference: {fileID: 0}
+    - target: {fileID: 528243108946493712, guid: 8e8d4bb715fc06a4f8f3d01dd521f483, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 528243108946493712, guid: 8e8d4bb715fc06a4f8f3d01dd521f483, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0.038000003
+      objectReference: {fileID: 0}
+    - target: {fileID: 528243108946493712, guid: 8e8d4bb715fc06a4f8f3d01dd521f483, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0.18657386
+      objectReference: {fileID: 0}
+    - target: {fileID: 528243108946493712, guid: 8e8d4bb715fc06a4f8f3d01dd521f483, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: -3.7595978
+      objectReference: {fileID: 0}
+    - target: {fileID: 528243108946493712, guid: 8e8d4bb715fc06a4f8f3d01dd521f483, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 2.6259995
+      objectReference: {fileID: 0}
+    - target: {fileID: 528243108946493712, guid: 8e8d4bb715fc06a4f8f3d01dd521f483, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 2.955597
+      objectReference: {fileID: 0}
+    - target: {fileID: 528243108946493712, guid: 8e8d4bb715fc06a4f8f3d01dd521f483, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -1.2380981
+      objectReference: {fileID: 0}
     - target: {fileID: 528243109085885528, guid: 8e8d4bb715fc06a4f8f3d01dd521f483, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -5309,7 +5587,75 @@ PrefabInstance:
       propertyPath: m_Name
       value: Answers
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 528243110388250826, guid: 8e8d4bb715fc06a4f8f3d01dd521f483, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0.9620001
+      objectReference: {fileID: 0}
+    - target: {fileID: 528243110388250826, guid: 8e8d4bb715fc06a4f8f3d01dd521f483, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0.93217975
+      objectReference: {fileID: 0}
+    - target: {fileID: 528243110388250826, guid: 8e8d4bb715fc06a4f8f3d01dd521f483, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0.02037134
+      objectReference: {fileID: 0}
+    - target: {fileID: 528243110388250826, guid: 8e8d4bb715fc06a4f8f3d01dd521f483, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0.19440624
+      objectReference: {fileID: 0}
+    - target: {fileID: 528243110388250826, guid: 8e8d4bb715fc06a4f8f3d01dd521f483, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: -10.8280945
+      objectReference: {fileID: 0}
+    - target: {fileID: 528243110388250826, guid: 8e8d4bb715fc06a4f8f3d01dd521f483, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 5.6447983
+      objectReference: {fileID: 0}
+    - target: {fileID: 528243110388250826, guid: 8e8d4bb715fc06a4f8f3d01dd521f483, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 2.8114014
+      objectReference: {fileID: 0}
+    - target: {fileID: 528243110388250826, guid: 8e8d4bb715fc06a4f8f3d01dd521f483, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -4.3361015
+      objectReference: {fileID: 0}
+    - target: {fileID: 528243110704917570, guid: 8e8d4bb715fc06a4f8f3d01dd521f483, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0.9486287
+      objectReference: {fileID: 0}
+    - target: {fileID: 528243110704917570, guid: 8e8d4bb715fc06a4f8f3d01dd521f483, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 528243110704917570, guid: 8e8d4bb715fc06a4f8f3d01dd521f483, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0.04237134
+      objectReference: {fileID: 0}
+    - target: {fileID: 528243110704917570, guid: 8e8d4bb715fc06a4f8f3d01dd521f483, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0.2088293
+      objectReference: {fileID: 0}
+    - target: {fileID: 528243110704917570, guid: 8e8d4bb715fc06a4f8f3d01dd521f483, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: -7.2982025
+      objectReference: {fileID: 0}
+    - target: {fileID: 528243110704917570, guid: 8e8d4bb715fc06a4f8f3d01dd521f483, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0.3260002
+      objectReference: {fileID: 0}
+    - target: {fileID: 528243110704917570, guid: 8e8d4bb715fc06a4f8f3d01dd521f483, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -0.000030517578
+      objectReference: {fileID: 0}
+    - target: {fileID: 528243110704917570, guid: 8e8d4bb715fc06a4f8f3d01dd521f483, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -7
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 528243108946493715, guid: 8e8d4bb715fc06a4f8f3d01dd521f483, type: 3}
+    - {fileID: 528243110388250837, guid: 8e8d4bb715fc06a4f8f3d01dd521f483, type: 3}
+    - {fileID: 528243108915875033, guid: 8e8d4bb715fc06a4f8f3d01dd521f483, type: 3}
+    - {fileID: 528243110704917581, guid: 8e8d4bb715fc06a4f8f3d01dd521f483, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 8e8d4bb715fc06a4f8f3d01dd521f483, type: 3}
 --- !u!1001 &4740821994751997881
 PrefabInstance:
@@ -5422,7 +5768,8 @@ PrefabInstance:
       propertyPath: m_FontData.m_Font
       value: 
       objectReference: {fileID: 12800000, guid: e3f4de319a2daf445bba7dbc43e36255, type: 3}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 4740821994097072855, guid: 8434122156d1660458ce0d8f163480c8, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 8434122156d1660458ce0d8f163480c8, type: 3}
 --- !u!1001 &4823588003532277375
 PrefabInstance:
