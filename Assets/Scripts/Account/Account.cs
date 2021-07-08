@@ -35,6 +35,10 @@ public class Account : MonoBehaviour
     }
     private void EnterGame(SocketIOEvent e)
     {
+        GameData.SetCoin(System.Convert.ToInt32(NetworkUtil.FixString(e.data["coin"].ToString())));
+        GameData.SetScore(System.Convert.ToInt32(NetworkUtil.FixString(e.data["score"].ToString())));
+        GameData.SetHeart(System.Convert.ToInt32(NetworkUtil.FixString(e.data["heart"].ToString())));
+
         SceneManager.LoadScene("Main Scene", LoadSceneMode.Single);
     }
     private void SaveUniqID(SocketIOEvent e)
