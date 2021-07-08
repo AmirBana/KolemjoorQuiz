@@ -17,7 +17,6 @@ public class SpinWheel : MonoBehaviour
 	private int randomTime;
 	private int itemNumber;
 	public Text timeText;
-	public CoinControl _CoinControl;
 
 	[SerializeField] Text userScoreTxt;
 	[SerializeField] Text userCoinTxt;
@@ -155,7 +154,7 @@ public class SpinWheel : MonoBehaviour
 				if (_prize[itemNumber].isCoin)
 				{
 					print("Priz Is : " + _prize[itemNumber].allPrize);
-					CoinControl.ManageCoin(_prize[itemNumber].allPrize);
+					GameData.SumCoin(_prize[itemNumber].allPrize);
 				}
 				Invoke("UpdateCoin", 5 * randomTime);
 				StartCoroutine(SpinTheWheel(5 * randomTime, maxAngle));
