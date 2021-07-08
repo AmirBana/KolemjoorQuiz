@@ -52,19 +52,19 @@ public static class GameData
     #region Heart
     public static void SetHeart(int MHeart)
     {
-        ObscuredPrefs.SetInt("Score", MHeart);
+        ObscuredPrefs.SetInt("Heart", MHeart);
     }
     public static void SumHeart(int MHeart)
     {
-        ObscuredPrefs.SetInt("Score", ObscuredPrefs.GetInt("Score") + MHeart);
+        ObscuredPrefs.SetInt("Heart", ObscuredPrefs.GetInt("Heart") + MHeart);
     }
     public static void TakeHeart(int MHeart)
     {
-        ObscuredPrefs.SetInt("Score", ObscuredPrefs.GetInt("Score") - MHeart);
+        ObscuredPrefs.SetInt("Heart", ObscuredPrefs.GetInt("Heart") - MHeart);
     }
     public static int GetHeart()
     {
-        return ObscuredPrefs.GetInt("Score");
+        return ObscuredPrefs.GetInt("Heart");
     }
     #endregion
 }
