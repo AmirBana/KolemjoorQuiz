@@ -19,4 +19,28 @@ public static class NetworkPacketStruct
         return e;
     }
     #endregion
+
+    #region Game Data
+    public static JSONObject GameData_Coin(int value, string uid)
+    {
+        JSONObject e = new JSONObject(JSONObject.Type.OBJECT);
+        e.AddField("value", value);
+        e.AddField("uid", uid);
+        return e;
+    }
+    public static JSONObject GameData_Score(int value, string uid)
+    {
+        JSONObject e = new JSONObject(JSONObject.Type.OBJECT);
+        e.AddField("value", value);
+        e.AddField("uid", uid);
+        return e;
+    }
+    public static JSONObject GameData_Heart(int value, string uid)
+    {
+        JSONObject e = new JSONObject(JSONObject.Type.OBJECT);
+        e.AddField("value", value);
+        e.AddField("uid", uid);
+        return e;
+    }
+    #endregion
 }
