@@ -145,6 +145,7 @@ public class QuizeManager : MonoBehaviour
 	private void SelectQuestion()
 	{
 		IntractableAnswerBtns(true);
+		delete2Answers.interactable = true;
 		SetActiveOff();
 		if (isShowed == 10)
 		{
@@ -154,10 +155,12 @@ public class QuizeManager : MonoBehaviour
 		}
 		StartCoroutine("Timer");
 		int random;
+		int countQ = 0;
 		do
 		{
 			random = Random.Range(0, quizData.unAnsweredQ.Count);
-		} while (quizData.unAnsweredQ[random].hardness != currentHardness);
+			countQ++;
+		} while (quizData.unAnsweredQ[random].hardness != currentHardness && countQ < quizData.unAnsweredQ.Count);
 		questionTxt.text = quizData.unAnsweredQ[random].questionTxt;
 		for (int i = 0; i < answerBtns.Length; i++)
 		{
@@ -245,8 +248,7 @@ public class QuizeManager : MonoBehaviour
 		goNext.SetActive(true);
 		timerBtn.interactable = false;
 		goNext.GetComponent<Button>().onClick.AddListener(() => StartCoroutine(GoNextQuestion(btnImg, currentBtn)));
-		if (!isTried)
-			tryAgain.interactable = true;
+		tryAgain.interactable = true;
 
 	}
 	IEnumerator GoNextQuestion(Image btnImg, Button currentBtn)
