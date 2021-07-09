@@ -2509,77 +2509,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b85d85a505d1d1a4b8458ccf2b0bd3ac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  unAnswered:
-  - question: aa
-    answers:
-    - answer: aa
-      isCorrect: 1
-    - answer: ss
-      isCorrect: 0
-    - answer: dd
-      isCorrect: 0
-    - answer: ff
-      isCorrect: 0
-  - question: ss
-    answers:
-    - answer: aa
-      isCorrect: 1
-    - answer: ss
-      isCorrect: 0
-    - answer: dd
-      isCorrect: 0
-    - answer: ff
-      isCorrect: 0
-  - question: dd
-    answers:
-    - answer: aa
-      isCorrect: 1
-    - answer: ss
-      isCorrect: 0
-    - answer: dd
-      isCorrect: 0
-    - answer: ff
-      isCorrect: 0
-  - question: ff
-    answers:
-    - answer: aa
-      isCorrect: 1
-    - answer: ss
-      isCorrect: 0
-    - answer: dd
-      isCorrect: 0
-    - answer: ff
-      isCorrect: 0
-  - question: zz
-    answers:
-    - answer: aa
-      isCorrect: 1
-    - answer: ss
-      isCorrect: 0
-    - answer: dd
-      isCorrect: 0
-    - answer: ff
-      isCorrect: 0
-  - question: hh
-    answers:
-    - answer: aa
-      isCorrect: 1
-    - answer: ss
-      isCorrect: 0
-    - answer: dd
-      isCorrect: 0
-    - answer: ff
-      isCorrect: 0
-  - question: jj
-    answers:
-    - answer: aa
-      isCorrect: 1
-    - answer: ss
-      isCorrect: 0
-    - answer: dd
-      isCorrect: 0
-    - answer: ff
-      isCorrect: 0
+  quizData: {fileID: 11400000, guid: 83223865a3eb0fa4695456516bcae94a, type: 2}
+  hardness: 0
   questionTxt: {fileID: 725753413}
   answerBtns:
   - {fileID: 1248603029}
